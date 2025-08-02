@@ -13,7 +13,7 @@ public class Main {
         Thread palindromes = new Thread(
                 () -> {
                     for (String text : texts) {
-                        if (isPalindrome(text)) {
+                        if (isPalindrome(text) && !isSingleLetterRepeated(text)) {
                             increment(text);
                         }
                     }
